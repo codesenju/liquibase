@@ -1,4 +1,0 @@
-
---changeset hloni:3
-INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY,Email)
-VALUES (7, 'David', 32, 'Alfred', 9000.00 ,'david@example.com');

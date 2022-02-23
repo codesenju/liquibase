@@ -1,6 +1,5 @@
 version: '3'
 volumes:
-  PGDATA:
   sqldata:
 networks:
   net:
@@ -13,13 +12,13 @@ services:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=P@ssw0rd123
     ports:
-      - 1433:1433
+      - 1333:1433
     networks:
       - net
   liquibase:
     image: liquibase/liquibase:4.7
     volumes:
-      - ./liquibase_conf:/liquibase/changelog/
+      - ./:/liquibase/changelog/
     networks:
       - net
     depends_on:
